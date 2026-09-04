@@ -21,7 +21,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("Predictor en vivo")
     # 👇 REEMPLAZA el nombre del archivo de imagen
-    image = Image.open("knn.png")
+    image = Image.open("predictor.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos un Predictor en vivo: Ecuación Normal vs Gradiente Descendente")
     # 👇 REEMPLAZA la url por la de tu app en Streamlit Cloud
@@ -42,7 +42,7 @@ with col1:
 with col2:
     st.subheader("Predictor de compra de seguro")
     # 👇 REEMPLAZA el nombre del archivo de imagen
-    image = Image.open("knn.png")
+    image = Image.open("predictor_compra.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos cómo predecir la compra de un seguro. ")
     # 👇 REEMPLAZA la url por la de tu app en Streamlit Cloud
@@ -51,7 +51,7 @@ with col2:
 
     st.subheader("Árboles de Decisión")
     # 👇 REEMPLAZA el nombre del archivo de imagen
-    image = Image.open("knn.png")
+    image = Image.open("arboles.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos cómo funciona un árbol de decisión.")
     # 👇 REEMPLAZA la url por la de tu app en Streamlit Cloud
@@ -61,20 +61,20 @@ with col2:
 with col3:
     st.subheader("Agrupamiento con K-Means")
     # 👇 REEMPLAZA el nombre del archivo de imagen
-    image = Image.open("knn.png")
+    image = Image.open("k-means.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos cómo agrupar datos usando K-Means.")
     # 👇 REEMPLAZA la url por la de tu app en Streamlit Cloud
     url = "https://machinelearnings3.streamlit.app/"
     st.write(f"K-Means: [Enlace]({url})")
 
-    st.subheader("Agrupamiento con K-Means")
+    st.subheader("Consumo de energia")
     # 👇 REEMPLAZA el nombre del archivo de imagen
-    image = Image.open("knn.png")
+    image = Image.open("energia.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo agrupar datos usando K-Means.")
+    st.write("En el siguiente enlace veremos el consumo de energia Total vs Hora del Día. ")
     # 👇 REEMPLAZA la url por la de tu app en Streamlit Cloud
-    url = "https://machinelearnings3.streamlit.app/"
+    url = "https://machinelearnings6.streamlit.app/"
     st.write(f"K-Means: [Enlace]({url})")
 
     
