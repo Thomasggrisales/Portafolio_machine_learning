@@ -55,7 +55,7 @@ with col1:
     st.write(f"RNN: [Enlace]({url})")
 
     st.subheader("Reconocimiento de Imágenes")
-    image = Image.open("proyecto16.jpg")
+    image = Image.open("proyecto16.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos reconocimiento de imágenes usando un modelo entrenado en Teachable Machine.")
     url = "https://machinelearnings16visioncomb.streamlit.app/"
@@ -84,7 +84,7 @@ with col2:
     st.write(f"MNIST: [Enlace]({url})")
 
     st.subheader("Conversión de Texto a Audio")
-    image = Image.open("proyecto11.jpg")
+    image = Image.open("proyecto11.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos cómo convertir un texto escrito a formato de audio.")
     url = "https://machinelearnings11.streamlit.app/"
@@ -134,7 +134,7 @@ with col3:
     st.write(f"Traductor: [Enlace]({url})")
 
     st.subheader("Detección de Objetos en Imágenes")
-    image = Image.open("proyecto15.jpg")
+    image = Image.open("proyecto15.png")
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos detección de objetos en imágenes capturadas utilizando YOLOv5.")
     url = "https://machinelearnings15yolov5.streamlit.app/"
