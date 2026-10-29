@@ -33,33 +33,33 @@ with col1:
     url = "https://machinelearnings4.streamlit.app/"
     st.write(f"KNN: [Enlace]({url})")
 
-    st.subheader("Proyecto 7")
+    st.subheader("Regresión a Red Neuronal")
     image = Image.open("proyecto7.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 7.")
+    st.write("En el siguiente enlace veremos qué hace una neurona artificial y su función de activación.")
     url = "https://machinelearnings7.streamlit.app/"
-    st.write(f"App 7: [Enlace]({url})")
+    st.write(f"Red Neuronal: [Enlace]({url})")
 
-    st.subheader("Proyecto 10")
+    st.subheader("Recomendador Semántico")
     image = Image.open("proyecto10.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 10.")
+    st.write("En el siguiente enlace veremos un sistema que busca por significado dentro de un diccionario de referencia.")
     url = "https://machinelearnings10.streamlit.app/"
-    st.write(f"App 10: [Enlace]({url})")
+    st.write(f"Recomendador: [Enlace]({url})")
 
-    st.subheader("Proyecto 13")
+    st.subheader("RNN: Consumo de energía")
     image = Image.open("proyecto13.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 13.")
+    st.write("En el siguiente enlace veremos redes neuronales recurrentes para predecir el consumo de energía con patrón semanal.")
     url = "https://machinelearnings13.streamlit.app/"
-    st.write(f"App 13: [Enlace]({url})")
+    st.write(f"RNN: [Enlace]({url})")
 
-    st.subheader("Computer Vision Combine")
-    image = Image.open("visioncomb.png")
+    st.subheader("Reconocimiento de Imágenes")
+    image = Image.open("proyecto16.jpg")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos una aplicación combinada de Visión por Computadora.")
+    st.write("En el siguiente enlace veremos reconocimiento de imágenes usando un modelo entrenado en Teachable Machine.")
     url = "https://machinelearnings16visioncomb.streamlit.app/"
-    st.write(f"Vision Comb: [Enlace]({url})")
+    st.write(f"Reconocimiento: [Enlace]({url})")
 
 with col2:
     st.subheader("Predictor de compra de seguro")
@@ -76,26 +76,26 @@ with col2:
     url = "https://machinelearnings5.streamlit.app/"
     st.write(f"Árbol de Decisión: [Enlace]({url})")
 
-    st.subheader("Proyecto 8")
+    st.subheader("Reconocimiento de Dígitos")
     image = Image.open("proyecto8.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 8.")
+    st.write("En el siguiente enlace veremos el reconocimiento de dígitos MNIST subiendo tu propio modelo.")
     url = "https://machinelearnings8.streamlit.app/"
-    st.write(f"App 8: [Enlace]({url})")
+    st.write(f"MNIST: [Enlace]({url})")
 
-    st.subheader("Proyecto 11")
-    image = Image.open("proyecto11.png")
+    st.subheader("Conversión de Texto a Audio")
+    image = Image.open("proyecto11.jpg")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 11.")
+    st.write("En el siguiente enlace veremos cómo convertir un texto escrito a formato de audio.")
     url = "https://machinelearnings11.streamlit.app/"
-    st.write(f"App 11: [Enlace]({url})")
+    st.write(f"Texto a Audio: [Enlace]({url})")
 
-    st.subheader("Proyecto 14")
+    st.subheader("Generador de Texto LSTM")
     image = Image.open("proyecto14.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 14.")
+    st.write("En el siguiente enlace veremos un generador de texto utilizando Redes Neuronales Recurrentes LSTM.")
     url = "https://machinelearnings14.streamlit.app/"
-    st.write(f"App 14: [Enlace]({url})")
+    st.write(f"LSTM: [Enlace]({url})")
 
     st.subheader("Chatbot AI")
     image = Image.open("chat.png")
@@ -117,26 +117,26 @@ with col3:
     st.image(image, width=190)
     st.write("En el siguiente enlace veremos el consumo de energia Total vs Hora del Día. ")
     url = "https://machinelearnings6.streamlit.app/"
-    st.write(f"K-Means: [Enlace]({url})")
+    st.write(f"Consumo: [Enlace]({url})")
 
-    st.subheader("Proyecto 9")
+    st.subheader("Análisis de Sentimiento")
     image = Image.open("proyecto9.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 9.")
+    st.write("En el siguiente enlace veremos cómo medir la polaridad y subjetividad de un texto.")
     url = "https://machinelearnings9.streamlit.app/"
-    st.write(f"App 9: [Enlace]({url})")
+    st.write(f"Sentimiento: [Enlace]({url})")
 
-    st.subheader("Proyecto 12")
+    st.subheader("Traductor")
     image = Image.open("proyecto12.png")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos la aplicación número 12.")
+    st.write("En el siguiente enlace veremos un traductor que escucha lo que le hablas y lo procesa.")
     url = "https://machinelearnings12.streamlit.app/"
-    st.write(f"App 12: [Enlace]({url})")
+    st.write(f"Traductor: [Enlace]({url})")
 
-    st.subheader("Detección con YOLOv5")
-    image = Image.open("yolov5.png")
+    st.subheader("Detección de Objetos en Imágenes")
+    image = Image.open("proyecto15.jpg")
     st.image(image, width=190)
-    st.write("En el siguiente enlace veremos detección de objetos utilizando el modelo YOLOv5.")
+    st.write("En el siguiente enlace veremos detección de objetos en imágenes capturadas utilizando YOLOv5.")
     url = "https://machinelearnings15yolov5.streamlit.app/"
     st.write(f"YOLOv5: [Enlace]({url})")
 
