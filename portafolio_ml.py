@@ -189,4 +189,6 @@ with col3:
         try:
             st.image(Image.open("visionquest.png"), use_column_width=True)
         except FileNotFoundError:
-            st.warning("
+            st.warning("Imagen no disponible")
+        st.caption("Exploración profunda interactiva de la aplicación Vision Quest.")
+        st.link_button("Ver Aplicación", "https://machinelearninfgs18visionquest.streamlit.app/", use_container_width=True)
