@@ -1,148 +1,191 @@
 import streamlit as st
 from PIL import Image
 
-st.title("Aplicaciones de Machine Learning.")
+# Configuración opcional para que la página use todo el ancho disponible
+st.set_page_config(page_title="Portafolio ML", layout="wide")
+
+st.title("Portafolio de Machine Learning")
+st.markdown("---")
 
 with st.sidebar:
-    st.subheader("Aplicaciones de Machine Learning.")
-    parrafo = (
+    st.title("Sobre este portafolio")
+    st.info(
         "El Machine Learning permite a los sistemas aprender de los datos para "
         "identificar patrones, hacer predicciones y clasificar información sin "
         "ser programados explícitamente para cada tarea."
     )
-    st.write(parrafo)
+    st.divider()
+    st.subheader("Recursos adicionales")
+    st.write("En el siguiente enlace puedes encontrar más páginas y ejercicios prácticos:")
+    st.link_button("Ir a los ejercicios", "https://sites.google.com/view/aplicacionesdeia/inicio", use_container_width=True)
 
-url_ml = "https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ml})")
-
+# Creamos las 3 columnas
 col1, col2, col3 = st.columns(3)
 
+# ================= COLUMNA 1 =================
 with col1:
-    st.subheader("Predictor en vivo")
-    image = Image.open("predictor.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos un Predictor en vivo: Ecuación Normal vs Gradiente Descendente")
-    url = "https://machinelearningclass.streamlit.app/"
-    st.write(f"Predictor: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Predictor en vivo")
+        try:
+            st.image(Image.open("predictor.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Ecuación Normal vs Gradiente Descendente.")
+        st.link_button("Ver Aplicación", "https://machinelearningclass.streamlit.app/", use_container_width=True)
 
-    st.subheader("Consumo Total vs Hora del Día")
-    image = Image.open("knn.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo clasificar datos usando el algoritmo KNN.")
-    url = "https://machinelearnings4.streamlit.app/"
-    st.write(f"KNN: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Consumo vs Hora")
+        try:
+            st.image(Image.open("knn.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Clasificación de datos usando el algoritmo KNN.")
+        st.link_button("Ver Aplicación", "https://machinelearnings4.streamlit.app/", use_container_width=True)
 
-    st.subheader("Regresión a Red Neuronal")
-    image = Image.open("proyecto7.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos qué hace una neurona artificial y su función de activación.")
-    url = "https://machinelearnings7.streamlit.app/"
-    st.write(f"Red Neuronal: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Regresión a Red Neuronal")
+        try:
+            st.image(Image.open("proyecto7.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Exploración de neuronas artificiales y funciones de activación.")
+        st.link_button("Ver Aplicación", "https://machinelearnings7.streamlit.app/", use_container_width=True)
 
-    st.subheader("Recomendador Semántico")
-    image = Image.open("proyecto10.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos un sistema que busca por significado dentro de un diccionario de referencia.")
-    url = "https://machinelearnings10.streamlit.app/"
-    st.write(f"Recomendador: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Recomendador Semántico")
+        try:
+            st.image(Image.open("proyecto10.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Búsqueda por significado dentro de un diccionario de referencia.")
+        st.link_button("Ver Aplicación", "https://machinelearnings10.streamlit.app/", use_container_width=True)
 
-    st.subheader("RNN: Consumo de energía")
-    image = Image.open("proyecto13.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos redes neuronales recurrentes para predecir el consumo de energía con patrón semanal.")
-    url = "https://machinelearnings13.streamlit.app/"
-    st.write(f"RNN: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("RNN: Consumo de energía")
+        try:
+            st.image(Image.open("proyecto13.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Predicción de energía con patrón semanal usando redes recurrentes.")
+        st.link_button("Ver Aplicación", "https://machinelearnings13.streamlit.app/", use_container_width=True)
 
-    st.subheader("Reconocimiento de Imágenes")
-    image = Image.open("proyecto16.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos reconocimiento de imágenes usando un modelo entrenado en Teachable Machine.")
-    url = "https://machinelearnings16visioncomb.streamlit.app/"
-    st.write(f"Reconocimiento: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Reconocimiento de Imágenes")
+        try:
+            st.image(Image.open("proyecto16.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Uso de modelos entrenados previamente en Teachable Machine.")
+        st.link_button("Ver Aplicación", "https://machinelearnings16visioncomb.streamlit.app/", use_container_width=True)
 
+# ================= COLUMNA 2 =================
 with col2:
-    st.subheader("Predictor de compra de seguro")
-    image = Image.open("predictor_compra.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo predecir la compra de un seguro. ")
-    url = "https://machinelearnings2class.streamlit.app/"
-    st.write(f"Compra: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Predictor de Seguro")
+        try:
+            st.image(Image.open("predictor_compra.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Predicción de compra de seguros usando datos históricos.")
+        st.link_button("Ver Aplicación", "https://machinelearnings2class.streamlit.app/", use_container_width=True)
 
-    st.subheader("Árboles de Decisión")
-    image = Image.open("arboles.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo funciona un árbol de decisión.")
-    url = "https://machinelearnings5.streamlit.app/"
-    st.write(f"Árbol de Decisión: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Árboles de Decisión")
+        try:
+            st.image(Image.open("arboles.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Demostración del funcionamiento de un árbol de decisión.")
+        st.link_button("Ver Aplicación", "https://machinelearnings5.streamlit.app/", use_container_width=True)
 
-    st.subheader("Reconocimiento de Dígitos")
-    image = Image.open("proyecto8.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos el reconocimiento de dígitos MNIST subiendo tu propio modelo.")
-    url = "https://machinelearnings8.streamlit.app/"
-    st.write(f"MNIST: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Reconocimiento MNIST")
+        try:
+            st.image(Image.open("proyecto8.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Identificación de dígitos manuscritos subiendo tu propio modelo.")
+        st.link_button("Ver Aplicación", "https://machinelearnings8.streamlit.app/", use_container_width=True)
 
-    st.subheader("Conversión de Texto a Audio")
-    image = Image.open("proyecto11.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo convertir un texto escrito a formato de audio.")
-    url = "https://machinelearnings11.streamlit.app/"
-    st.write(f"Texto a Audio: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Texto a Audio")
+        try:
+            st.image(Image.open("proyecto11.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Conversión automática de texto escrito a formato de audio.")
+        st.link_button("Ver Aplicación", "https://machinelearnings11.streamlit.app/", use_container_width=True)
 
-    st.subheader("Generador de Texto LSTM")
-    image = Image.open("proyecto14.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos un generador de texto utilizando Redes Neuronales Recurrentes LSTM.")
-    url = "https://machinelearnings14.streamlit.app/"
-    st.write(f"LSTM: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Generador LSTM")
+        try:
+            st.image(Image.open("proyecto14.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Generación de texto mediante Redes Neuronales Recurrentes.")
+        st.link_button("Ver Aplicación", "https://machinelearnings14.streamlit.app/", use_container_width=True)
 
-    st.subheader("Chatbot AI")
-    image = Image.open("chat.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos una interfaz conversacional o Chatbot.")
-    url = "https://machinelearnings17chat.streamlit.app/"
-    st.write(f"Chat: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Chatbot AI")
+        try:
+            st.image(Image.open("chat.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Interfaz conversacional impulsada por inteligencia artificial.")
+        st.link_button("Ver Aplicación", "https://machinelearnings17chat.streamlit.app/", use_container_width=True)
 
+# ================= COLUMNA 3 =================
 with col3:
-    st.subheader("Agrupamiento con K-Means")
-    image = Image.open("k-means.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo agrupar datos usando K-Means.")
-    url = "https://machinelearnings3.streamlit.app/"
-    st.write(f"K-Means: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Agrupamiento K-Means")
+        try:
+            st.image(Image.open("k-means.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Técnicas de clusterización agrupando datos con K-Means.")
+        st.link_button("Ver Aplicación", "https://machinelearnings3.streamlit.app/", use_container_width=True)
 
-    st.subheader("Consumo de energia")
-    image = Image.open("energia.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos el consumo de energia Total vs Hora del Día. ")
-    url = "https://machinelearnings6.streamlit.app/"
-    st.write(f"Consumo: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Consumo de energía")
+        try:
+            st.image(Image.open("energia.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Análisis gráfico del consumo total frente a la hora del día.")
+        st.link_button("Ver Aplicación", "https://machinelearnings6.streamlit.app/", use_container_width=True)
 
-    st.subheader("Análisis de Sentimiento")
-    image = Image.open("proyecto9.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos cómo medir la polaridad y subjetividad de un texto.")
-    url = "https://machinelearnings9.streamlit.app/"
-    st.write(f"Sentimiento: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Análisis de Sentimiento")
+        try:
+            st.image(Image.open("proyecto9.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Medición de la polaridad y subjetividad de fragmentos de texto.")
+        st.link_button("Ver Aplicación", "https://machinelearnings9.streamlit.app/", use_container_width=True)
 
-    st.subheader("Traductor")
-    image = Image.open("proyecto12.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos un traductor que escucha lo que le hablas y lo procesa.")
-    url = "https://machinelearnings12.streamlit.app/"
-    st.write(f"Traductor: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Traductor por Voz")
+        try:
+            st.image(Image.open("proyecto12.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Sistema que escucha el audio y traduce según tu configuración.")
+        st.link_button("Ver Aplicación", "https://machinelearnings12.streamlit.app/", use_container_width=True)
 
-    st.subheader("Detección de Objetos en Imágenes")
-    image = Image.open("proyecto15.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace veremos detección de objetos en imágenes capturadas utilizando YOLOv5.")
-    url = "https://machinelearnings15yolov5.streamlit.app/"
-    st.write(f"YOLOv5: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Detección YOLOv5")
+        try:
+            st.image(Image.open("proyecto15.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Detección de objetos en tiempo real en imágenes usando YOLOv5.")
+        st.link_button("Ver Aplicación", "https://machinelearnings15yolov5.streamlit.app/", use_container_width=True)
 
-    st.subheader("Vision Quest")
-    image = Image.open("visionquest.png")
-    st.image(image, width=190)
-    st.write("En el siguiente enlace exploraremos la aplicación Vision Quest.")
-    url = "https://machinelearninfgs18visionquest.streamlit.app/"
-    st.write(f"Vision Quest: [Enlace]({url})")
+    with st.container(border=True):
+        st.subheader("Vision Quest")
+        try:
+            st.image(Image.open("visionquest.png"), use_column_width=True)
+        except FileNotFoundError:
+            st.warning("Imagen no disponible")
+        st.caption("Exploración profunda interactiva de la aplicación Vision Quest.")
+        st.link_button("Ver Aplicación", "https://machinelearninfgs18visionquest.streamlit.app/", use_container_width=True)
